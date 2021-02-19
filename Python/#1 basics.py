@@ -14,24 +14,40 @@ def main():
 
     ## *complex ##
     
-    c = complex(5, 3)
+    c1 = complex(5, 3)
     # or
-    k = 5 + 3j
+    c2 = 5 + 3j
 
-    print(k.real) # 5
-    print(k.imag) # 3
+    print(c1.real) # 5
+    print(c1.imag) # 3
 
 
 
-    #init and input / output
-
+    ###  init and input / output  ###
     name, age = 'vadik', 15
     print(f'Hello {name}, your age {age}')
 
     # output using .format
-
     month, year = input("Enter month: "), int(input("Enter year: "))
     print('Hello {}, your age {}' .format(month, year))
+
+
+
+    ###  if else  ###
+    a, b = 3, '3'
+    if a is not b: # Мы не можем сравнить цифру и строку
+        pass       # поэтому используем данный операнд
+    elif a == b:
+        pass
+    elif a != 3 or b != '3':
+        pass
+    elif a == 3 and b is '3':
+        pass
+    else: 
+        pass
+
+
+
 
 
 
