@@ -7,7 +7,7 @@ def main():
             'age': 18,
             'working': True
            }
-
+           
     dic_json = json.dumps(dic)  # To json
 
     # 'r+' - read text and append
@@ -16,6 +16,7 @@ def main():
 
 
     with open('data.json', 'a+') as file:
+        
         file.read()
         file.write(dic_json)
 
