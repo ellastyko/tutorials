@@ -4,7 +4,9 @@ import time
 def main():
     
     ### Module time ###
-    t = time.localtime()
+    time.time() # time in seconds
+    
+    t = time.localtime() # object
     print(t.tm_year)    # 2021
     print(t.tm_mon)     # 2 (febr)
     print(t.tm_mday)    # 20
