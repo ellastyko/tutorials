@@ -1,0 +1,35 @@
+git init - создаем репозиторий
+git clone -  клонируем репозиторий в папку 
+
+
+git add file.html   - добавляем файл в репозиторий
+git add .    - добавляем все файлы в репозиторий
+git add --all
+git restore --staged .   - удаляем все из репозитория
+git restore --staged file.html  - удаляем из репзитория
+git rm --cached file.html   - удаляем из репзитория
+
+git status - проверяем добаленные файлы и возможные изменения
+
+
+git commit -m "comment" - сохраняем изменения версии
+
+git branch name  - создаем новую ветку name 
+git branch -b name - создаем ветку и сразу переходим на нее ??? 
+git branch -D name  - удаляем ветку
+git merge name  - совмещаем текущую ветку master и name
+git checkout name  - переключаемся на ветку name
+
+
+#Подключаем почту и ник с GitHub
+
+git config --global user.name "nickname from GitHub"
+git config --global user.email "e-mail"
+
+
+
+#Создаем .gitignore файл
+
+notepad .gitignore  - создаем файл и редактируем (вписываем в него файлы которые нужно проигнорировать)
+git status    - проверяем. все файлы вписанные в .gitignore исчезнут
+git add .gitignore  - добавляем файл на репозиторий 
