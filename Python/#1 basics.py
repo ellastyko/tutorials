@@ -1,7 +1,7 @@
 # Python Basics
 
 def main():
-    
+   
     # Types of data
        
     type(True)      # bool 

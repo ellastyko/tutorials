@@ -13,6 +13,15 @@ var a = 5;
 let b = 'text';
 const c = 'text';
 
+/* Const example */
+const a = 6;
+// a = 8; // Ошибка
+const b = [];
+// b = ["hello"]; // Ошибка
+b.push(1); // OK
+console.log(b) // [1]
+
+
 /* short variant */
 var f = 5, g = 't';
 

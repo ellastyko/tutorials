@@ -16,3 +16,10 @@ console.log(Json_obj);
 
 new_obj = JSON.parse(Json_obj); // Конвертируем в объект
 console.log(new_obj);
+
+/* Объеденяем свойства разных объектов в одном */
+user = {
+    job: "Engineer",
+};
+Object.assign(user, obj, new_obj);
+console.log(user);
