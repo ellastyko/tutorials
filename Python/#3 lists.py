@@ -30,6 +30,9 @@ def main():
 
     # Проверка на наличие элемента в списке
     List.__contains__(1337)  # True
+    # Или
+    if 1337 in List:
+        print('1337 in list')
 
     # В списке остаются только str элементы
     List.__str__()    
@@ -41,6 +44,8 @@ def main():
     List.index('zac', 0, len(List)) 
 
     print(List)
+
+    
 
     # Очистить список
     List.clear()

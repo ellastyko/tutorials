@@ -11,8 +11,8 @@ def main():
         print("Пожалуйста, вводите только числа")
     except ZeroDivisionError:
         print("На ноль делить нельзя")
-    except:
-        print("Undefined Error")
+    except Exception as e:
+        raise e # raise означает получить иключение и повторно поднять его
     else:
         print("It`s ok")  # Выполняется при положительном результате
     finally:

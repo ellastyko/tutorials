@@ -1,6 +1,6 @@
 ### Database in Python ### 
 import sqlite3
-PATH = 'tutorials/Python/sqlite3/data.db'
+PATH = 'Python/sqlite3/data.db'
 
 def main():
     # Создаем соединение с нашей базой данных
@@ -14,7 +14,7 @@ def main():
     try:
         sql.execute("""CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, login TEXT, password TEXT, name TEXT)""")
         # Или если таблиц много используя отдельный sql файл
-        # with open('tutorials/Python/sqlite3/script.sql', 'r') as fd:
+        # with open('Python/sqlite3/script.sql', 'r') as fd:
         #     script = fd.read()
         #     sql.executescript(script)
     except:
@@ -26,7 +26,7 @@ def main():
     login = input("Введите логин: ")
     password = input("Введите пароль: ")
     name = input("Введите имя: ")
-    status = input("Введите act: ")
+    status = input("Введите действие signup/signin/set/get: ")
 
     # Set data
     if status == "signup":
@@ -37,6 +37,7 @@ def main():
             db.commit()
             print("Successfull registration")
         else:
+            db.rollback() # Откат изменений
             print("This login isn`t available")
     # Check data
     elif status == "signin":
@@ -67,13 +68,16 @@ def main():
         else:
             # Confortable way to print data
             [print(str(i)) for i in sql.execute(f"SELECT * FROM users WHERE login='{login}'")]
-            print("Ready for update")
-
-            sql.execute(f"UPDATE users SET name='{name}' WHERE login='{login}'")
-            sql.execute(f"SELECT * FROM users WHERE login='{login}'")
-            mass = sql.fetchall()
-            print(mass)
-            db.commit()
+            # Update of name
+            try:
+                sql.execute(f"UPDATE users SET name='{name}' WHERE login='{login}'")
+                sql.execute(f"SELECT * FROM users WHERE login='{login}'")
+            except:
+                db.rollback() # Откат изменений
+            else:
+                mass = sql.fetchall()
+                print(mass)
+                db.commit()
     else:
         pass
 
