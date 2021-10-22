@@ -1,68 +1,67 @@
-### Создание проекта ###
+# Создание проекта ###
 								     
-composer create-project laravel/laravel example-app		     
+	composer create-project laravel/laravel example-app		     
 					     	
-composer global require laravel/installer			     
-laravel new example-app						     
+	composer global require laravel/installer			     
+	laravel new example-app						     
 								     	
-# Крайний случай 					     
-composer create-project --prefer-dist laravel/laravel example-app    
-composer update --ignore-platform-reqs				     
+## Крайний случай 					     
+	composer create-project --prefer-dist laravel/laravel example-app    
+	composer update --ignore-platform-reqs				     
+--------------------------------------------------
+
+
+# Запуск сервера #
+	php artisan serve            
 
 
 
-## Запуск сервера ##
-php artisan serve            
+## Создание контроллера 
+	php artisan make:controller ProductController 		    
+	php artisan make:controller ProductController --api         
+	php artisan make:controller PhotoController --resource	    	
 
 
-
-# Создание контроллера 
-php artisan make:controller ProductController 		    
-php artisan make:controller ProductController --api         
-php artisan make:controller PhotoController --resource	    	
-
-
-# Создание модели
-php artisan make:model Product		      
-php artisan make:model Product --migration	     
+## Создание модели
+	php artisan make:model Product		      
+	php artisan make:model Product --migration	     
 --------------------------------------------- 
 
-# Миграции  
+## Миграции  
 
-	---  Создать миграцию  ---          
-									**** create_users_table - класс миграции; users - название таблицы в бд
-php artisan make:migration create_users_table --create=users
-
-	--- Редактировать миграцию ---
-php artisan make:migration add_votes_to_users_table --table=users
-
+### Создать миграцию           
+									
+    php artisan make:migration create_users_table --create=users
+**** create_users_table - класс миграции; users - название таблицы в бд
+### Редактировать миграцию 
+	php artisan make:migration add_votes_to_users_table --table=users
 -----------------------------------------------------------
 
 
 
------ Запуск всех необходимых вам миграций -------
+# Запуск всех необходимых вам миграций 
  
-php artisan migrate
-либо
-php artisan migrate:refresh
-php artisan migrate:fresh --seed
+    php artisan migrate
+    php artisan migrate:refresh
+    php artisan migrate:fresh --seed
 -------------------------------------------------
 
 
 
 
 
---------- Создание seeders ------------- 
+# Создание seeders 
 					 
-php artisan make:seeder ExampleSeeder    
-php artisan make:factory ExampleFactory  
+	php artisan make:seeder ExampleSeeder    
+	php artisan make:factory ExampleFactory  
 					 
----------------------------------------- 
+
 
 
 
 # Создание формы валидации 
-php artisan make:request UpdateUserRequest
+    
+    php artisan make:request UpdateUserRequest
 
 
 
@@ -74,9 +73,8 @@ php artisan make:request UpdateUserRequest
 
 
 
--------- React / vue installation ------
+# React / vue installation 
 
-composer require laravel/ui
-php artisan ui react
+    composer require laravel/ui
+    php artisan ui react
 
------------------------------------------
