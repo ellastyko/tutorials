@@ -9,17 +9,21 @@ git restore --staged .   - удаляем все из репозитория
 git restore --staged file.html  - удаляем из репзитория
 git rm --cached file.html   - удаляем из репзитория
 
+git reset --hard HEAD - откатываем изменения
+
 git status - проверяем добаленные файлы и возможные изменения
 
 
 git commit -m "comment" - сохраняем изменения версии
 
 git branch name  - создаем новую ветку name 
-git branch -b name - создаем ветку и сразу переходим на нее ??? 
-git branch -D name  - удаляем ветку
-git merge name  - совмещаем текущую ветку master и name
+git checkout -b name - создаем ветку и сразу переходим на нее 
+git branch -d name  - удаляем ветку
+git merge name  - совмещаем текущую ветку и name
 git checkout name  - переключаемся на ветку name
 
+
+git pull - обновляем файлы в соответствии с репозиторием (git fetch ???)
 
 #Подключаем почту и ник с GitHub
 
