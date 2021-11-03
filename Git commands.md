@@ -1,11 +1,14 @@
-git init - создаем репозиторий
-git clone -  клонируем репозиторий в папку 
+# Cоздаем репозиторий
+    git init
+# Клонируем репозиторий 
+    git clone
 
 
-git add file.html   - добавляем файл в репозиторий
+git add file.html - добавляем файл в репозиторий
+
 git add .    - добавляем все файлы в репозиторий
-git add --all
 git restore --staged .   - удаляем все из репозитория
+
 git restore --staged file.html  - удаляем из репзитория
 git rm --cached file.html   - удаляем из репзитория
 
