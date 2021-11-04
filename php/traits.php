@@ -2,3 +2,10 @@
 
 include './classes.php';
 use classes;
+
+
+trait auto {
+
+    private $var;
+    
+}

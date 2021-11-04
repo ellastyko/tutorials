@@ -2,13 +2,12 @@
     
     namespace classes;
 
-    function hello() {
-        return "hi!";
-    }
 
     class Human {
 
+        private $id;
         public $age; 
+        protected $name;
 
         public function __construct($age = 18)
         {
@@ -25,10 +24,19 @@
         public function __construct($name)
         {
             parent::__construct();
-            echo parent::humanity();
+        }
+
+        public function __invoke()
+        {
+            echo "invoke";
+        }
+
+        public function rename($name) {
+            $this->name = $name;
         }
     }
 
 
     $obj = new Child('Vadik');
     echo $obj->age;
+    $obj->rename('Josh');
