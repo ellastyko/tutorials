@@ -1,42 +1,28 @@
-# Cоздаем репозиторий
-    git init
-# Клонируем репозиторий 
-    git clone
+# Добавление изменений в репозиторий
+    Проиндексировать файл. Т.е. добавить файл в следующий коммит.
+    git add file.html 
+    git add .   # добавить все измененные файлы
 
+    git status   # Проверяем изменения
 
-git add file.html - добавляем файл в репозиторий
+    git commit -m "comment"   # Зафиксировать изменения
 
-git add .    - добавляем все файлы в репозиторий
-git restore --staged .   - удаляем все из репозитория
+    git push  # Применение локальных изменений
 
-git restore --staged file.html  - удаляем из репзитория
-git rm --cached file.html   - удаляем из репзитория
+### Убираем файл из индексируемых
+    git restore --staged file.html     
 
-git reset --hard HEAD - откатываем изменения
+### Откатить на 1 commit. Либо отменить последний
+    git reset --hard HEAD~1  
+--------------------------------------
 
-git status - проверяем добаленные файлы и возможные изменения
+# Работа с ветками git
+    git branch name  
+    git checkout name  // переключаемся на ветку name
+    git checkout -b name // создать ветку и сразу перейти на нее 
+    git branch -d name // удаляем ветку
+    git merge name  // совмещаем текущую ветку и name
+-------------------------------------- 
 
-
-git commit -m "comment" - сохраняем изменения версии
-
-git branch name  - создаем новую ветку name 
-git checkout -b name - создаем ветку и сразу переходим на нее 
-git branch -d name  - удаляем ветку
-git merge name  - совмещаем текущую ветку и name
-git checkout name  - переключаемся на ветку name
-
-
-git pull - обновляем файлы в соответствии с репозиторием (git fetch ???)
-
-#Подключаем почту и ник с GitHub
-
-git config --global user.name "nickname from GitHub"
-git config --global user.email "e-mail"
-
-
-
-#Создаем .gitignore файл
-
-notepad .gitignore  - создаем файл и редактируем (вписываем в него файлы которые нужно проигнорировать)
-git status    - проверяем. все файлы вписанные в .gitignore исчезнут
-git add .gitignore  - добавляем файл на репозиторий 
+### Обновляем файлы в соответствии с репозиторием 
+    git pull 
