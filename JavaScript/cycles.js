@@ -1,4 +1,4 @@
-// Cycle While
+
 var x = 0;
 var list = ['a', 'b', 'c', 'd', 'e']
 
@@ -10,7 +10,6 @@ while(true) {
     }
     x++;
 }
-
 
 
 

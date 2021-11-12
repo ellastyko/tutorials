@@ -14,16 +14,16 @@ let b = 'text';
 const c = 'text';
 
 /* Const example */
-const a = 6;
+const d = 6;
 // a = 8; // Ошибка
-const b = [];
+const f = [];
 // b = ["hello"]; // Ошибка
-b.push(1); // OK
-console.log(b) // [1]
+f.push(1); // OK
+console.log(f) // [1]
 
 
 /* short variant */
-var f = 5, g = 't';
+var h = 5, i = 't';
 
 /* Если var обьявить в цикле(цикл внутри функции) переменная будет видна во всей функции. 
    В свою очередь let будет видна только внутри цикла, как и в С++. */

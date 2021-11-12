@@ -1,12 +1,23 @@
 
-window.addEventListener('load', (event) => {
+const url = `https://jsonplaceholder.typicode.com/posts`
+
+/*    1 variant    */
+async function func1() {
     
-    let response = await fetch(url);
+    let promise = await fetch(url)
 
-    if (response.ok)        // если HTTP-статус в диапазоне 200-299                     
-        let json = await response.json();  // получаем тело ответа (см. про этот метод ниже)
-    else 
-        alert("Ошибка HTTP: " + response.status);
+    console.log(await promise.json())
+}
 
-    // https://learn.javascript.ru/fetch
-});
+/*    2 variant    */
+function func2() {
+    
+    fetch(url)
+    .then(response => response.json())
+    .then(result => console.log(result))
+}
+
+// func1()
+// func2()
+
+// https://learn.javascript.ru/fetch

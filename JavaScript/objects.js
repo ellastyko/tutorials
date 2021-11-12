@@ -5,8 +5,6 @@ obj = {
 };
 console.log(obj);
 
-console.log(obj.name, obj.surname, obj.id)
-
 obj.age = 50; // Добавляем новое поле
 
 
