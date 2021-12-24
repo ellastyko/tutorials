@@ -3,10 +3,10 @@
 def main():
 
     dic = {
-            "name": "Vadim",
-            "age": 18,
-            "working": True
-           }
+        "name": "Vadim",
+        "age": 18,
+        "working": True
+    }
 
     # Get value
     dic.get("name")  # Vadim

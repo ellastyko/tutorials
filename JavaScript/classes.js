@@ -1,33 +1,42 @@
-
-// class parent {
-//     constructor(name = 'pavel', surname = 'durov') {
-//         this.name = name;
-//         this.surname = surname;
-//         alert(`Hello ${this.name} ${this.surname}`);
-//     }
-// }
+const log = console.log
 
 
-// class child extends parent {
-    
-//     constructor(id = 0) {
-//         alert(`Hello ${this.name} ${this.surname} ${id}`);
-//     }
-// }
+class Parent {
 
-// var x = new child();
-
-var glo;
-
-let a = {
-    name: 'vad',
-    age: 18,
+    constructor(name = 'pavel', surname = 'durov') {
+        this.name = name;
+        this.surname = surname;
+        log(`Parent: ${this.name} ${this.surname}`);
+    }
 }
 
-glo = a;
 
-delete a;
-// glo = null;
+class Child extends Parent {
+    
+    constructor(age = 1) {
+        super();
+        this.age = age
+        log(`Child: ${this.name} ${this.surname} ${this.age}`);
+    }
 
-console.log(typeof(glo));
-console.log(glo)
+    getAge = () => this.age
+
+
+
+}
+
+var chld = new Child(3);
+log(chld.getAge())
+
+// var glo;
+
+// let a = {
+//     name: 'vad',
+//     age: 18,
+// }
+
+// glo = a;
+
+
+// console.log(typeof(glo));
+// console.log(glo)

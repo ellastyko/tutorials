@@ -63,6 +63,7 @@
 
     $arr = ['a' => 'alpha', 'b' => 'bravo'];
 
+    
     foreach ($arr as $value => $key) 
         echo $value;
     

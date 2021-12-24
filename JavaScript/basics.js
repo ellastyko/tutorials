@@ -26,7 +26,7 @@ console.log(f) // [1]
 var h = 5, i = 't';
 
 /* Если var обьявить в цикле(цикл внутри функции) переменная будет видна во всей функции. 
-   В свою очередь let будет видна только внутри цикла, как и в С++. */
+   В свою очередь let будет видна только внутри цикла. */
 
 
 
@@ -38,6 +38,7 @@ typeof true; // boolean
 typeof [1, 2, 3]; // object
 typeof null; // object
 typeof undefined; // undefined
+typeof NaN; // number
 
 
 
