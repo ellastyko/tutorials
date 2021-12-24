@@ -71,10 +71,3 @@
 
 
 
-
-
-# React / vue installation 
-
-    composer require laravel/ui
-    php artisan ui react
-
